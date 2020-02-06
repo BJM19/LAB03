@@ -34,7 +34,7 @@ public class RegistryTest {
 		Person person1 = new Person("Laura Garcia",1023456789,20,Gender.FEMALE,true);
 		RegisterResult result = registry.registerVoter(person);		
 		RegisterResult result1 = registry.registerVoter(person1);		
-		Assert.assertEquals(RegisterResult.VALID, result1);		
+		Assert.assertEquals(RegisterResult.DUPLICATED, result1);		
 	}
 	
 	@Test 
