@@ -31,7 +31,7 @@ public class RegistryTest {
 	public void validateId(){
 		Registry registry = new Registry();
 		Person person = new Person("Hernesto Acevedo",1023456789,20,Gender.MALE,true);
-		Person person1 = new Person("Laura Garcia",1023456789,19,Gender.FEMALE,true);
+		Person person1 = new Person("Laura Garcia",1023456789,20,Gender.FEMALE,true);
 		RegisterResult result = registry.registerVoter(person);		
 		RegisterResult result1 = registry.registerVoter(person1);		
 		Assert.assertEquals(RegisterResult.VALID, result1);		
