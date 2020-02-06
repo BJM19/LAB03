@@ -27,25 +27,6 @@ public class RegistryTest {
 		Assert.assertEquals(RegisterResult.INVALID_AGE, result);
 	}
 	
-	@Test 
-	public void validateId(){
-		Registry registry = new Registry();
-		Person person = new Person("Hernesto Acevedo",1023456789,20,Gender.MALE,true);
-		Person person1 = new Person("Laura Garcia",1023456789,20,Gender.FEMALE,true);
-		RegisterResult result = registry.registerVoter(person);		
-		RegisterResult result1 = registry.registerVoter(person1);		
-		Assert.assertEquals(RegisterResult.DUPLICATED, result1);		
-	}
-	
-	@Test 
-	public void invalidateId(){
-		Registry registry = new Registry();
-		Person person = new Person("Hernesto Acevedo",1023456789,20,Gender.MALE,true);
-		Person person1 = new Person("Hernesto Acevedo",1023456789,20,Gender.MALE,true);
-		RegisterResult result = registry.registerVoter(person);	
-		RegisterResult result1 = registry.registerVoter(person1);				
-		Assert.assertEquals(RegisterResult.DUPLICATED, result1);		
-	}
 	
 	@Test 
 	public void validateName(){
