@@ -36,9 +36,9 @@ public class Registry {
 		return result;
 		
 	}
-	private RegisterResult validateAge(Person p){
+	private RegisterResult validateAge(Person m){
 		RegisterResult result=RegisterResult.VALID;
-		if(p.getAge()<=0){
+		if(m.getAge()<=0){
 			result=RegisterResult.INVALID_AGE;
 		}
 		return result;	
@@ -53,7 +53,7 @@ public class Registry {
 	}
 	private RegisterResult validateAlive(Person m){
 		RegisterResult result=RegisterResult.VALID;
-		if(!p.isAlive()){
+		if(!m.isAlive()){
 			result=RegisterResult.DEAD;
 		}
 		return result;
