@@ -13,25 +13,25 @@ public class TarifasTest {
     }
     @Test
 	public void noDeberiaAplicarPorEdad(){
-	CalculadorDescuentos tarifa = new CalcularDescuentos();
+	CalculadorDescuentos tarifa = new CalculadorDescuentos();
 	double total = tarifa.calculoTarifa(10000,5,35);
 	Assert.assertTrue(total==10000);
     }
     @Test 
 	public void deberiaAplicarporMayor(){
-	CalculadorDescuentos tarifa = new CalcularDescuentos();
+	CalculadorDescuentos tarifa = new CalculadorDescuentos();
 	double total = tarifa.calculoTarifa(10000,5,66);
 	Assert.assertTrue(total<10000);
 	}
    @Test
 	public void deberiaAplicarpordias(){
-	CalculadorDescuentos tarifa = new CalcularDescuentos();
+	CalculadorDescuentos tarifa = new CalculadorDescuentos();
 	double total = tarifa.calculoTarifa(10000,5,66);
 	Assert.assertTrue(total<10000);
 	}
   @Test
-	public void no deberiaAplicarpordias(){
-	CalculadorDescuentos tarifa = new CalcularDescuentos();
+	public void nodeberiaAplicarpordias(){
+	CalculadorDescuentos tarifa = new CalculadorDescuentos();
 	double total = tarifa.calculoTarifa(10000,30,35);
 	Assert.assertTrue(total<10000);
 	}
